@@ -13,33 +13,16 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         
-        <script>
-            var userAgent = navigator.userAgent;
-            if (userAgent.indexOf('iPhone') > -1) {
-              document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
-              var mobile_system = 'iphone';
-            } else if (userAgent.indexOf('Android') > -1) {
-              document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
-              var mobile_system = 'android';
-            } else {
-              var mobile_system = '';
-            }
-        </script>
-        
-        <!-- your scripts here -->
-        <script src="js/app/app.js"></script>
-        <script src="js/lib/jquery.mobile.js"></script>
-        
-
     </head> 
     <body>
         <!-- PAGE -->
-        <div class="page_wrapper red">
+        <div class="">
             <!-- HEADER -->
             <div class="navbar-fixed">
                 <nav>
                     <div class="nav-wrapper teal">
-                        <a href="#!" class="brand-logo">Ashesi</a>
+                        <a href="#" data-activates="slide-out" class="button-collapse left" onClick="showSideBar()"><i class="material-icons">menu</i></a>
+                        <a href="#!" class="brand-logo center">Ashesi</a>
                         <ul class="right hide-on-med-and-down">
                             <li><a href="sass.html">Sass</a></li>
                             <li><a href="badges.html">Components</a></li>
@@ -47,6 +30,25 @@
                         
                     </div>
                 </nav>
+                
+                <ul id="slide-out" class="side-nav">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src="img/bulb.jpg">
+                            </div>
+                            <a href="#!user"><img class="circle" src="img/passport.jpg"></a>
+                            <a href="#!name"><span class="white-text name">Joseph Mills</span></a>
+                            <a href="#!email"><span class="white-text email">mills.josef@gmail.com</span></a>
+                        </div>
+                    </li>
+                    <li><a href="#!"><i class="material-icons">cloud</i>Home</a></li>
+                    <li><a href="#!" class="collapsible-header">Departments</a><i class="material-icons">arrow_drop_down</i></li>
+                    <li><div class="divider"></div></li>
+                    <li><a class="subheader">Subheader</a></li>
+                    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+                </ul>
+                
             </div>
             <!-- CONTENT -->
         	<div class="row">
@@ -63,6 +65,18 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.button-collapse').sideNav({
+                    menuWidth: 300, // Default is 300
+                    edge: 'left', // Choose the horizontal origin
+                    closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                    draggable: true, // Choose whether you can drag to open on touch screens,
+                    onOpen: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is opened
+                    onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
+                });
+            });
+        </script>
     </body>
 </html>
 
