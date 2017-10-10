@@ -2,17 +2,19 @@
 <html>
   	<head>
         <meta charset="utf-8">
-        <title>phonegap & jquery mobile boilerplate</title>
+        <title>Mobile App</title>
   
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!--Import personal css-->
+        <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         
         <script>
-            var userAgent = navigator.userAgent + '';
+            var userAgent = navigator.userAgent;
             if (userAgent.indexOf('iPhone') > -1) {
               document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
               var mobile_system = 'iphone';
@@ -32,27 +34,52 @@
     </head> 
     <body>
         <!-- PAGE -->
-        <div >
+        <div class="page_wrapper red">
             <!-- HEADER -->
             <div class="navbar-fixed">
                 <nav>
                     <div class="nav-wrapper teal">
-                    <a href="#!" class="brand-logo">Ashesi</a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="sass.html">Sass</a></li>
-                        <li><a href="badges.html">Components</a></li>
-                    </ul>
+                        <a href="#!" class="brand-logo">Ashesi</a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="sass.html">Sass</a></li>
+                            <li><a href="badges.html">Components</a></li>
+                        </ul>
+                        <ul class="right" id="searchIcon">
+                        <li><a href="#!" class="activator waves-effect waves-light"><i class="material-icons large">search</i></a></li>
+                        </ul>
+                        <form id="searchBar" class="right col s3 m5 l5">
+                            <div class="input-field activator">
+                                <input id="search" type="search" class="" required></input>
+                                <label for="search" class="label-icon"><i class="material-icons small">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
                     </div>
                 </nav>
             </div>
             <!-- CONTENT -->
-        	<div >	
-        		<p>This is a single page boilerplate template that you can copy to build your first jQuery Mobile page. Each link or form from here will pull a new page in via Ajax to support the animated page transitions.</p>
-        		<p>This template is standard HTML document with a single "page"</p>
-        	</div>
+        	<div class="row">
+        	    <div class="col s6 m4 l3">
+                    <div class="card hoverable small blue-grey darken-1">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/bulb.jpg">
+                            
+                        </div>
+                        <div class="card-content white-text">
+                            <span class="card-title activator grey-text text-darken-4 truncate">Artificial Intelligence<i class="material-icons right">more_vert</i></span>
+                            <p><a class="truncate" href="http://www.ashesi.edu.gh/academics/computer-science/computer-science-courses.html#Artificial Intelligence">View on Ashesi website</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4 truncate">Artificial Intelligence<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>    
             <!-- FOOTER -->
         	<div >
-        		<h4>Footer content</h4>
+        		
         	</div>
 
         </div>
@@ -60,6 +87,7 @@
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>
 

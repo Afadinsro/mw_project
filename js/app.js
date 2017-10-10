@@ -10,6 +10,5 @@ var startApp = function() {
 
 function toggleSearch(){
     var searchBar = document.getElementByID("search");
-    //searchBar.addClass("showSearchBar");
-    var searchIcon = document.getElementByID("searchIcon");
+    searchBar.addClass("showSearchBar");
 }
