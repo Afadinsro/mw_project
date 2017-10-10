@@ -1,0 +1,19 @@
+
+
+
+
+.page_wrapper{
+    
+}
+
+.showSearchBar{
+    display: block;
+}
+
+.searchBar{
+    display: none;
+}
+
+#searchIcon{
+    
+}
