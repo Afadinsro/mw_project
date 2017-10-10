@@ -2,7 +2,7 @@
 <html>
   	<head>
         <meta charset="utf-8">
-        <title>Mobile App</title>
+        <title>Home | Ashesi App</title>
   
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,17 +16,13 @@
     </head> 
     <body>
         <!-- PAGE -->
-        <div class="">
+        <header class="">
             <!-- HEADER -->
             <div class="navbar-fixed">
                 <nav>
                     <div class="nav-wrapper red darken-4">
                         <a href="#" data-activates="slide-out" class="button-collapse left"><i class="material-icons">menu</i></a>
                         <a href="#!" class="brand-logo center">Ashesi</a>
-                        <ul class="right hide-on-med-and-down">
-                            <li><a href="sass.html">Sass</a></li>
-                            <li><a href="badges.html">Components</a></li>
-                        </ul>
                     </div>
                 </nav>
             </div>
@@ -43,45 +39,66 @@
                         <a href="#!email"><span class="white-text email">mills.josef@gmail.com</span></a>
                     </div>
                 </li>
-                <li><a href="https://www.google.com" class="waves-effect""><i class="material-icons">cloud</i>Home</a></li>
-                <li class="no-padding">
-                    <ul class="collapsible" data-collapsible="accordion">
-                        <li>
-                            <a class="collapsible-header">Departments<i class="material-icons">arrow_drop_down</i></a></li>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="#!" class="waves-effect"">First</a><li>
-                                    <li><a href="#!" class="waves-effect"">Second</a><li>
-                                    <li><a href="#!" class="waves-effect"">Third</a><li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+                <li><a href="#!" class="waves-effect"><i class="material-icons">home</i>Home</a></li>
+                
                 <li><div class="divider"></div></li>
                 <li><a class="subheader">Departments</a></li>
-                <li><a class="waves-effect" href="#!">Computer Science</a></li>
-                <li><a class="waves-effect" href="#!">Business Administration</a></li>
-                <li><a class="waves-effect" href="#!">Engineering</a></li>
+                <li><a class="waves-effect" href="departments/computer-science.html"><i class="material-icons">computer</i>Computer Science</a></li>
+                <li><a class="waves-effect" href="departments/business-administration.html"><i class="material-icons">monetization_on</i>Business Administration</a></li>
+                <li><a class="waves-effect" href="departments/engineering.html"><i class="material-icons">build</i>Engineering</a></li>
             </ul>
+        </header>
+        
             
             <!-- CONTENT -->
-        	<div class="row">
-        	    
-            </div>    
+        <main class="grey lighten-1">
+        	<div class="container">
+        	    <div class="row">
+    	            <a class="carousel-item"><img class="col s12" src="img/bulb.jpg"></a>
+        	    </div>
+            </div>  
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel">
+                            <div class="row">
+                                <i class="material-icons center">info</i>
+                            </div>
+                            <div class=row>
+                                <p class="flow-text">Since our founding in 2002, Ashesi has established a reputation as a leader in undergraduate education in Africa, with an educational experience that fosters ethical leadership, an entrepreneurial mindset and the ability to solve complex problems. These qualities are what set Ashesi students and alumni apart. Across various industries today, Ashesi graduates are highly sought, and over 90% have stayed to work for progress in Africa.</p>
+                                <p class="flow-text">At the heart of the Ashesi experience is our interdisciplinary core curriculum, and our campus culture. Ashesi students come from 24 countries across the globe to learn, live and innovate together; almost half are on scholarships, and 48% are women. On campus, these students join with faculty and Ashesi leadership on a shared mission to transform the African continent.</p>
+                            </div>    
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </main>  
             <!-- FOOTER -->
-        	<div >
-        		
-        	</div>
-
-        </div>
+        <footer class="page-footer red darken-4">
+            <div class="footer-copyright">
+                <div class="container">
+                    <h6 class="center">© 2017 Ashesi University</h6>
+                    <h6 class="center">1 University Avenue, Berekuso; PMB CT 3, Cantonments, Accra, Ghana </h6>
+                    <h6 class="center">Phone: +233.302.610.330</h6>
+                    <h6 class="center">Email: info@ashesi.edu.gh</h6>
+                </div>
+            </div>
+        </footer>
         
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
-        
+        <script>
+            $(document).ready(
+                function(){
+                    $('.collapsible').collapsible();
+                }
+            );
+        </script>
     </body>
 </html>
+
 
 
